@@ -1,3 +1,9 @@
+lliurex-kdeconnect-disabler (0.4.23) jammy; urgency=medium
+
+  * Added zero-lliurex-kdeconnect-disabler 
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 22 Apr 2024 16:11:01 +0200
+
 lliurex-kdeconnect-disabler (0.3.23) jammy; urgency=medium
 
   * Initial release. 
