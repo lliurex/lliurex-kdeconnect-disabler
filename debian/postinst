@@ -34,21 +34,21 @@ LLIUREX_AUTO_FILE="/usr/share/lliurex-kdeconnect-disabler/autostart/org.kde.kdec
 case "$1" in
     configure)
 
-	 if [ -f "$ORIGINAL_DBUS_FILE" ]; then
+	 if [ ! -L "$ORIGINAL_DBUS_FILE" ]; then
 
 		    dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_DBUS_FILE}  ${ORIGINAL_DBUS_FILE}
 		    ln -s ${LLIUREX_DBUS_FILE} ${ORIGINAL_DBUS_FILE}
 
 	fi
 
-         if [ -f "$ORIGINAL_APPS_FILE" ]; then
+         if [ ! -L "$ORIGINAL_APPS_FILE" ]; then
 
                     dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_APPS_FILE}  ${ORIGINAL_APPS_FILE}
                     ln -s ${LLIUREX_APPS_FILE} ${ORIGINAL_APPS_FILE}
 
         fi
 
-         if [ -f "$ORIGINAL_AUTO_FILE" ]; then
+         if [ ! -L "$ORIGINAL_AUTO_FILE" ]; then
 
                     dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_AUTO_FILE}  ${ORIGINAL_AUTO_FILE}
                     ln -s ${LLIUREX_AUTO_FILE} ${ORIGINAL_AUTO_FILE}
