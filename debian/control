@@ -2,7 +2,7 @@ Source: lliurex-kdeconnect-disabler
 Section: admin
 Priority: extra
 Maintainer: Hector Garcia Huerta <lliurex_devel1@edu.gva.es>
-Build-Depends: debhelper (>= 8.0.0), n4d-dev
+Build-Depends: debhelper (>= 8.0.0), zero-dev, llxsrchelper, inkscape, python3-poinstaller
 Standards-Version: 3.9.7
 Homepage: http://www.lliurex.net
 
@@ -12,4 +12,11 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, kdeconnect
 # n4d-lliurex-base (>= 0.7),
 Description: KDE Connect disabler
  This package disables KDE Connect service
+
+Package: zero-lliurex-kdeconnect-disabler
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, zero-center, epi-gtk
+# n4d-lliurex-base (>= 0.7),
+Description: KDE Connect disabler ZMD
+ This package disables KDE Connect service through Zero-Center
  
