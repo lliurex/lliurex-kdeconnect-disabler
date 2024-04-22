@@ -27,7 +27,9 @@ ORIGINAL_APPS_FILE="/usr/share/applications/org.kde.kdeconnect.daemon.desktop"
 DIVERT_APPS_FILE="/usr/share/lliurex-kdeconnect-disabler/diversions/org.kde.kdeconnect.daemon.desktop.diverted"
 LLIUREX_APPS_FILE="/usr/share/lliurex-kdeconnect-disabler/applications/org.kde.kdeconnect.daemon.desktop"
 
-
+ORIGINAL_AUTO_FILE="/etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop"
+DIVERT_AUTO_FILE="/usr/share/lliurex-kdeconnect-disabler/diversions/org.kde.kdeconnect.daemon.desktop.autostart.diverted"
+LLIUREX_AUTO_FILE="/usr/share/lliurex-kdeconnect-disabler/autostart/org.kde.kdeconnect.daemon.desktop"
 
 case "$1" in
     configure)
@@ -46,7 +48,13 @@ case "$1" in
 
         fi
 
+         if [ -f "$ORIGINAL_AUTO_FILE" ]; then
 
+                    dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_AUTO_FILE}  ${ORIGINAL_AUTO_FILE}
+                    ln -s ${LLIUREX_AUTO_FILE} ${ORIGINAL_AUTO_FILE}
+
+        fi
+	
 	;;
 
 
