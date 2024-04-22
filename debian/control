@@ -1,0 +1,15 @@
+Source: lliurex-kdeconnect-disabler
+Section: admin
+Priority: extra
+Maintainer: Hector Garcia Huerta <lliurex_devel1@edu.gva.es>
+Build-Depends: debhelper (>= 8.0.0), n4d-dev
+Standards-Version: 3.9.7
+Homepage: http://www.lliurex.net
+
+Package: n4d-ldap
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, kdeconnect
+# n4d-lliurex-base (>= 0.7),
+Description: KDE Connect disabler
+ This package disables KDE Connect service
+ 
