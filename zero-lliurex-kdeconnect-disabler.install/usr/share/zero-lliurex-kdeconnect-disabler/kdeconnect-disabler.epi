@@ -1,0 +1,8 @@
+{
+	"type":"apt",
+	"pkg_list": [{"name":"lliurex-kdeconnect-disabler","key_store":"zero-lliurex-kdeconnect-disabler","custom_name":"KDE Connect disabler - Disables KDE Connect service","custom_icon":"kdeconnect-disabler.png"}], 
+	"custom_icon_path":"/usr/share/zero-lliurex-kdeconnect-disabler/",
+	"zomando":"zero-lliurex-kdeconnect-disabler",
+	"check_zomando_state":false
+}
+
