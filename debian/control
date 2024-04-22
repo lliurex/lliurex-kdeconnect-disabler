@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 8.0.0), n4d-dev
 Standards-Version: 3.9.7
 Homepage: http://www.lliurex.net
 
-Package: n4d-ldap
+Package: lliurex-kdeconnect-disabler
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, kdeconnect
 # n4d-lliurex-base (>= 0.7),
