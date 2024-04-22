@@ -22,7 +22,7 @@ ORIGINAL_DBUS_FILE="/usr/share/dbus-1/services/org.kde.kdeconnect.service"
 DIVERT_DBUS_FILE="/usr/share/lliurex-kdeconnect-disabler/diversions/org.kde.kdeconnect.service.diverted"
 LLIUREX_DBUS_FILE="/usr/share/lliurex-kdeconnect-disabler/dbus/org.kde.kdeconnect.service.lliurex"
 
-ORIGINAL_APPS_FILE="/usr/share/dbus-1/services/org.kde.kdeconnect.service"
+ORIGINAL_APPS_FILE="/usr/share/applications/org.kde.kdeconnect.daemon.desktop"
 DIVERT_APPS_FILE="/usr/share/lliurex-kdeconnect-disabler/diversions/org.kde.kdeconnect.daemon.desktop.diverted"
 LLIUREX_APPS_FILE="/usr/share/lliurex-kdeconnect-disabler/applications/org.kde.kdeconnect.daemon.desktop"
 
