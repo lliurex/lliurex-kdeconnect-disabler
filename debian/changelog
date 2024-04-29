@@ -1,3 +1,9 @@
+lliurex-kdeconnect-disabler (0.5.23) jammy; urgency=medium
+
+  * Added uninstall functionality 
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 29 Apr 2024 12:28:00 +0200
+
 lliurex-kdeconnect-disabler (0.4.23) jammy; urgency=medium
 
   * Added zero-lliurex-kdeconnect-disabler 
