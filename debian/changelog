@@ -1,3 +1,9 @@
+lliurex-kdeconnect-disabler (0.5.21) focal; urgency=medium
+
+  * Added uninstall option
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 30 Apr 2024 11:46:32 +0200
+
 lliurex-kdeconnect-disabler (0.4.21) focal; urgency=medium
 
   * Initial release. 
