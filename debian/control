@@ -10,6 +10,8 @@ Package: lliurex-kdeconnect-disabler
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts:  kdeconnect
+Breaks: kdeconnect
+Replaces: kdeconnect
 Description: KDE Connect disabler
  This package disables KDE Connect service
 
