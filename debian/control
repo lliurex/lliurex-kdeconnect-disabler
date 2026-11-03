@@ -1,6 +1,6 @@
 Source: lliurex-kdeconnect-disabler
 Section: admin
-Priority: extra
+Priority: important
 Maintainer: Hector Garcia Huerta <lliurex_devel1@edu.gva.es>
 Build-Depends: debhelper (>= 8.0.0), zero-dev, llxsrchelper, inkscape, python3-poinstaller
 Standards-Version: 3.9.7

@@ -1,7 +1,9 @@
-lliurex-kdeconnect-disabler (0.5.33) jammy; urgency=medium
+lliurex-kdeconnect-disabler (0.5.34) jammy; urgency=medium
 
-  * conflicts and replaces instead of conflicts to allow package to be installed
-    via dist-upgrade 
+  * conflicts provides and replaces instead of just conflicts 
+    to allow package to be installed via dist-upgrade 
+  * Priority: important is needed to untie apt from deciding whether to keep
+    or uninstall kdeconnect
 
  -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 03 Nov 2026 12:26:28 +0100
 
