@@ -1,6 +1,6 @@
-lliurex-kdeconnect-disabler (0.5.29) jammy; urgency=medium
+lliurex-kdeconnect-disabler (0.5.30) jammy; urgency=medium
 
-  * breaks and replaces instead of conflicts to allow package to be installed
+  * provides, breaks and replaces instead of conflicts to allow package to be installed
     via dist-upgrade 
 
  -- Hector Garcia Huerta <hectorgh@gmail.com>  Tue, 03 Nov 2026 12:26:28 +0100
