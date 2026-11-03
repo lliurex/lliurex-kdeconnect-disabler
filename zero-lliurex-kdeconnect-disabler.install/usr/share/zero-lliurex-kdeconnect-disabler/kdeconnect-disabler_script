@@ -13,6 +13,7 @@ case $ACTION in
 		do
 
 			apt-get remove -y $ix
+			apt install kdeconnect
 			TEST=$( dpkg-query -s  $ix 2> /dev/null| grep Status | cut -d " " -f 4 )
 			if [ "$TEST" == 'installed' ];then
 				exit 1
