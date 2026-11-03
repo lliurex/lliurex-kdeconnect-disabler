@@ -9,6 +9,7 @@ Homepage: http://www.lliurex.net
 Package: lliurex-kdeconnect-disabler
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: kdeconnect
 Breaks: kdeconnect (<< 24.0)
 Replaces: kdeconnect (<< 24.0)
 Description: KDE Connect disabler
