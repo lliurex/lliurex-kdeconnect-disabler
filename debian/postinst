@@ -34,27 +34,27 @@ LLIUREX_AUTO_FILE="/usr/share/lliurex-kdeconnect-disabler/autostart/org.kde.kdec
 case "$1" in
     configure)
 
-	 if [ ! -L "$ORIGINAL_DBUS_FILE" ]; then
-
-		    dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_DBUS_FILE}  ${ORIGINAL_DBUS_FILE}
-		    ln -s ${LLIUREX_DBUS_FILE} ${ORIGINAL_DBUS_FILE}
-
-	fi
-
-         if [ ! -L "$ORIGINAL_APPS_FILE" ]; then
-
-                    dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_APPS_FILE}  ${ORIGINAL_APPS_FILE}
-                    ln -s ${LLIUREX_APPS_FILE} ${ORIGINAL_APPS_FILE}
-
-        fi
-
-         if [ ! -L "$ORIGINAL_AUTO_FILE" ]; then
-
-                    dpkg-divert --package ${PACKAGE_NAME} --rename --quiet --add --divert  ${DIVERT_AUTO_FILE}  ${ORIGINAL_AUTO_FILE}
-                    ln -s ${LLIUREX_AUTO_FILE} ${ORIGINAL_AUTO_FILE}
-
-        fi
+	# This package conflicts with kdeconnect. Diversions no longer needed
+	# BUT we might need to remove old diversions
 	
+	if [ -L ${ORIGINAL_DBUS_FILE} ] ; then
+        	rm -rf $ORIGINAL_DBUS_FILE || true
+		dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${ORIGINAL_DBUS_FILE}|| true
+		
+        fi
+
+        if [ -L ${ORIGINAL_APPS_FILE} ] ; then
+                rm -rf $ORIGINAL_APPS_FILE || true
+                dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${ORIGINAL_APPS_FILE}|| true
+                
+        fi
+
+        if [ -L ${ORIGINAL_AUTO_FILE} ] ; then
+                rm -rf $ORIGINAL_AUTO_FILE || true
+                dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${ORIGINAL_AUTO_FILE}|| true
+                
+        fi
+		
 	;;
 
 

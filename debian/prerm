@@ -36,24 +36,6 @@ case "$1" in
 
     remove|purge)
 
-	if [ -L ${ORIGINAL_DBUS_FILE} ] ; then
-        	rm -rf $ORIGINAL_DBUS_FILE || true
-		dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${ORIGINAL_DBUS_FILE}|| true
-		
-        fi
-
-        if [ -L ${ORIGINAL_APPS_FILE} ] ; then
-                rm -rf $ORIGINAL_APPS_FILE || true
-                dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${ORIGINAL_APPS_FILE}|| true
-                
-        fi
-
-        if [ -L ${ORIGINAL_AUTO_FILE} ] ; then
-                rm -rf $ORIGINAL_AUTO_FILE || true
-                dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${ORIGINAL_AUTO_FILE}|| true
-                
-        fi
-
     ;;
 
     failed-upgrade)
